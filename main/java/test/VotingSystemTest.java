@@ -76,6 +76,20 @@ class VotingSystemTest {
     }
 
     @Test
+    @DisplayName("Test voting result")
+    void voteForCandidateFail(){
+        System.out.println("-------Test method 'voteForCandidateFail' is executed------");
+        var votingSystem = new VotingSystem();
+        User testUser = new User("testUser", "password", false);
+
+        votingSystem.addUser(testUser);
+
+        votingSystem.voteForCandidate(testUser, "nonexistentCandidate");
+        assertFalse(testUser.hasVoted());
+
+    }
+
+    @Test
     void displayTotalVotePerCandidate() {
     }
 }
