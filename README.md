@@ -1,6 +1,8 @@
 # Online-Voting-System-with-Comprehensive-JUnit-Testing
 My old assignment in December in 2023 for JUnit testing.
 I copied my code from the private repository in the organization repository in my online course.
+Result photos for this console based app are below.
+My source code: main -> java -> src or test.
 
 ---
 
@@ -56,4 +58,14 @@ Vote for candidate "Jane"
 - Implement a logout feature for users. Write a JUnit test for this feature using JUnit Assertions to check if the actual results match the expected results.
 - Use lambda expressions in your tests to create anonymous functions. This will allow you to write more concise and readable tests.
 - Use the "::" method reference (lambda expression shorthand notation) in your tests. This will allow you to reference methods directly in your tests, making your tests more readable.
+
+---
+
+## Result Photos
+
+![result1](./main/java/resources/pic1.png)
+![result2](./main/java/resources/pic2.png)
+![result3](./main/java/resources/pic3.png)
+![result4](./main/java/resources/pic4.png)
+
 
