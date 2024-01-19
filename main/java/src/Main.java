@@ -103,6 +103,8 @@ public class Main {
                                                 break;
 
                                             case 3: stayLoggedIn = false; // Log Out
+                                                System.out.println("Logging out");
+                                                break;
 
                                             default:
                                                 System.out.println("Invalid option. Try from 1-3.");
