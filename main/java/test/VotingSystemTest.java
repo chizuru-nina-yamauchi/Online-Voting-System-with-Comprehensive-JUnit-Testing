@@ -90,6 +90,16 @@ class VotingSystemTest {
     }
 
     @Test
-    void displayTotalVotePerCandidate() {
+    @DisplayName("Test display Total Vote result")
+    void displayTotalVotePerCandidateSuccess() {
+        System.out.println("-------Test method 'voteForCandidateFail' is executed------");
+        var votingSystem = new VotingSystem();
+        Candidate candidate = new Candidate("testCandidate", 5);
+
+        votingSystem.addCandidate(candidate);
+
+        // Call the method with the candidate name
+
+
     }
 }

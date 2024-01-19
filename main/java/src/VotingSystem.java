@@ -86,12 +86,12 @@ public class VotingSystem {
 
 
 
-    public void displayTotalVotePerCandidate(String candidateName){
+    public String displayTotalVotePerCandidate(String candidateName){
         if(candidates.containsKey(candidateName)){
             Candidate selectedCandidate = candidates.get(candidateName);
-            System.out.println("Total vote for " + candidateName + ": " + selectedCandidate.getVotes());
+            return "Total vote for " + candidateName + ": " + selectedCandidate.getVotes();
         }else{
-            System.out.println("Candidate not found: " + candidateName);
+            return "Candidate not found: " + candidateName;
         }
 
     }
