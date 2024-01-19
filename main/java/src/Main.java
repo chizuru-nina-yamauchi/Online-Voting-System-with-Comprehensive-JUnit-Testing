@@ -98,8 +98,8 @@ public class Main {
                                             case 2:
                                                 System.out.println("Enter the candidate you want to check the total votes for");
                                                 String candidateNameForTotalVote = input.nextLine();
-                                                votingSystem.displayTotalVotePerCandidate(candidateNameForTotalVote);
-
+                                                String result = votingSystem.displayTotalVotePerCandidate(candidateNameForTotalVote);
+                                                System.out.println(result);
                                                 break;
 
                                             case 3: stayLoggedIn = false; // Log Out

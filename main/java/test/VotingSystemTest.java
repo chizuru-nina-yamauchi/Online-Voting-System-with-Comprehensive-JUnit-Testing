@@ -108,7 +108,7 @@ class VotingSystemTest {
 
     @Test
     @DisplayName("Test display Total vote result")
-    void displayTotalVotePerCandidateFail(){
+    void displayTotalVotePerCandidateNotFail(){
         System.out.println("-------Test method 'displayTotalVotePerCandidateFai' is executed------");
         var votingSystem = new VotingSystem();
 

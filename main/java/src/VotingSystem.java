@@ -59,7 +59,6 @@ public class VotingSystem {
     public boolean userLogin(String username, String password){
         User user = getUserByUsername(username);
         if(user != null && user.getPassword().equals(password)){
-            System.out.println("You're now logged in the system. Choose your option: ");
             return true;
         }else {
             System.out.println("Incorrect username or password. \nLogin failed. Try again.");
