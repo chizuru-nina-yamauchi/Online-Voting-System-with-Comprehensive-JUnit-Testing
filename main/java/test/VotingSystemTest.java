@@ -59,7 +59,20 @@ class VotingSystemTest {
 
 
     @Test
-    void voting() {
+    @DisplayName("Test voting result")
+    void voteForCandidateSuccess() {
+        System.out.println("-------Test method 'voteForCandidateSuccess' is executed------");
+        var votingSystem = new VotingSystem();
+        User testUser = new User("testUser", "password", false);
+        Candidate testCandidate = new Candidate("testCandidate", 0);
+
+        votingSystem.addUser(testUser);
+        votingSystem.addCandidate(testCandidate);
+
+        votingSystem.voteForCandidate(testUser, "testCandidate");
+
+        assertTrue(testUser.hasVoted());
+        assertEquals(1, testCandidate.getVotes());
     }
 
     @Test
