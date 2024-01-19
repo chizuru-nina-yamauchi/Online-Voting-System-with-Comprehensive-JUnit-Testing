@@ -99,6 +99,9 @@ class VotingSystemTest {
         votingSystem.addCandidate(candidate);
 
         // Call the method with the candidate name
+        String result = votingSystem.displayTotalVotePerCandidate("testCandidate");
+
+        assertEquals("Total vote for testCandidate: 5", result);
 
 
     }
