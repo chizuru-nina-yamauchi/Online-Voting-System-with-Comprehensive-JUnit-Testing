@@ -70,12 +70,29 @@ public class VotingSystem {
 
 
     public void voteForCandidate(User user, String candidateName){
-
+        //check if the candidate exists
+        if(candidates.containsKey(candidateName)){
+            Candidate selectedCandidate = candidates.get(candidateName);
+            // update the candidate's votes and mark the user as voted
+            selectedCandidate.setVotes(selectedCandidate.getVotes() + 1);
+            user.setVoted(true);
+            System.out.println("You have voted successfully for : " + candidateName);
+        } else {
+            System.out.println("Invalid candidate. Please enter a valid candidate.");
+        }
 
     }
 
 
-    public void displayTotalVotePerCandidate(){
+
+
+    public void displayTotalVotePerCandidate(String candidateName){
+        if(candidates.containsKey(candidateName)){
+            Candidate selectedCandidate = candidates.get(candidateName);
+            System.out.println("Total vote for " + selectedCandidate + ": " + selectedCandidate.getVotes());
+        }else{
+            System.out.println("Candidate not found: " + candidateName);
+        }
 
     }
 

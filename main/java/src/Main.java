@@ -71,7 +71,7 @@ public class Main {
                             if(votingSystem.userLogin(usernameToLogin, passwordToLogIn)){
                                 boolean stayLoggedIn = true;
                                 while(stayLoggedIn){
-                                    System.out.println("You're now logged in the system. \nChoose your option.");
+                                    System.out.println("You're now logged in the system. Choose your option.");
                                     System.out.println("1.Vote for candidate");
                                     System.out.println("2.Check the total votes per candidate");
                                     System.out.println("3.Log out.");
@@ -96,6 +96,9 @@ public class Main {
                                                 break;
 
                                             case 2:
+                                                System.out.println("Enter the candidate you want to check the total votes for");
+                                                String candidateNameForTotalVote = input.nextLine();
+                                                votingSystem.displayTotalVotePerCandidate(candidateNameForTotalVote);
 
                                                 break;
 
@@ -111,9 +114,6 @@ public class Main {
                                         System.out.println("Invalid format. Try with a valid NUMBER");
                                     }
                                 }
-
-
-
 
                             }else {
                                 System.out.println("Login failed. Try again.");
