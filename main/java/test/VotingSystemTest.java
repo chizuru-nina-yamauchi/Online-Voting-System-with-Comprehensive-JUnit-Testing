@@ -92,7 +92,7 @@ class VotingSystemTest {
     @Test
     @DisplayName("Test display Total Vote result")
     void displayTotalVotePerCandidateSuccess() {
-        System.out.println("-------Test method 'voteForCandidateFail' is executed------");
+        System.out.println("-------Test method 'displayTotalVotePerCandidateSuccess' is executed------");
         var votingSystem = new VotingSystem();
         Candidate candidate = new Candidate("testCandidate", 5);
 
@@ -103,6 +103,19 @@ class VotingSystemTest {
 
         assertEquals("Total vote for testCandidate: 5", result);
 
+
+    }
+
+    @Test
+    @DisplayName("Test display Total vote result")
+    void displayTotalVotePerCandidateFail(){
+        System.out.println("-------Test method 'displayTotalVotePerCandidateFai' is executed------");
+        var votingSystem = new VotingSystem();
+
+        // Call the method with a non-existent candidate name
+        String result = votingSystem.displayTotalVotePerCandidate("nonExistentCandidate");
+
+        assertEquals("Candidate not found: nonExistentCandidate", result);
 
     }
 }
